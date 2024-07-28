@@ -1,0 +1,467 @@
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    /* البداية من أعلى الصفحة */
+    opacity: 0;
+    /* الشفافية عند البداية */
+  }
+
+  to {
+    transform: translateY(0);
+    /* النهاية في الموقع الطبيعي */
+    opacity: 1;
+    /* الشفافية النهائية */
+  }
+}
+
+
+/* Basic CSS for the navigation bar */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px 40px 20px 113px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  /* لجعل العنصر ثابت */
+  top: 0;
+  /* يحدد موقعه من الأعلى */
+  left: 0;
+  /* يحدد موقعه من اليسار */
+  width: 100%;
+  /* يجعل العرض 100% */
+  z-index: 1000;
+  /* لضمان ظهوره فوق العناصر الأخرى */
+  animation: slideIn 0.8s ease;
+  /* إضافة تأثير الانزلاق عند تحميل الصفحة */
+
+}
+
+#brief {
+  width: 21%;
+  line-height: 1.5;
+  /* تعيين ارتفاع السطر */
+}
+
+#aboutUsBrief {
+
+  line-height: 1.4;
+  /* تعيين ارتفاع السطر */
+}
+
+#logo:hover {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(83%) saturate(2475%) hue-rotate(1deg) brightness(96%) contrast(89%);
+  /* تغيير اللون عند hover */
+}
+
+#sectionSearch {
+  padding: 12px;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255)
+}
+
+.fas.fa-search {
+  color: #1b1b1b;
+  /* اللون المطلوب */
+}
+
+
+nav ul {
+  list-style-type: none;
+  /* padding: 0; */
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  /* تأثير انتقال سلس */
+  padding: 5px 10px;
+  /* إضافة حشو حول النص لجعل تأثير hover أفضل */
+  border-radius: 5px;
+}
+
+
+nav a:hover {
+  color: hwb(11 20% 0%);
+  /* تغيير لون النص عند التمرير */
+  background-color: rgb(255, 255, 255);
+  /* تغيير خلفية الرابط عند التمرير */
+  border-radius: 5px;
+  /* إضافة زوايا دائرية للخلفية */
+}
+
+/* Basic CSS for the form elements */
+body {
+  padding-top: 200px;
+  padding-left: 120px;
+  /* يجب أن يتناسب مع ارتفاع nav */
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background-image:
+    linear-gradient(to right, rgba(0, 20, 36, 0.914), rgba(0, 0, 0, 0.327)),
+    /* التدرج اللوني */
+    url('assets/doha_qatar.jpg');
+  /* تحديد صورة الخلفية */
+  background-size: cover;
+  /* جعل الصورة تغطي الصفحة بالكامل */
+  background-repeat: no-repeat;
+  /* منع تكرار الصورة */
+  background-attachment: fixed;
+  /* تثبيت الصورة أثناء التمرير */
+  /* margin: 20px; */
+}
+
+
+.aboutUsContent,
+.teamContent {
+  margin-bottom: 65px;
+  background-color: rgba(0, 0, 0, 0.297);
+  /* إضافة حشو حول النص لجعل تأثير hover أفضل */
+  border-radius: 20px;
+  padding: 50px 50px 50px 60px;
+  width: 90%;
+  backdrop-filter: blur(5px);
+  /* إضافة تأثير التمويه */
+  -webkit-backdrop-filter: blur(5px);
+  /* لضمان التوافق مع المتصفحات التي تستخدم محرك WebKit */
+}
+
+#logo {
+
+  width: 100px;
+  /* تعيين عرض ثابت */
+  height: auto;
+  /* يحافظ على نسبة الطول إلى العرض */
+}
+
+
+
+div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 200px;
+  padding: 5px;
+  border: none;
+  /* إزالة الإطار */
+  outline: none;
+  /* إزالة الإطار عند التركيز */
+}
+
+button {
+  padding: 7px 15px;
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: #ce4323;
+}
+
+
+h1 {
+  font-size: 65px;
+}
+
+/* Basic CSS for the report section */
+h2 {
+  margin-top: 30px;
+}
+
+
+#report,
+#result {
+  padding: 10px;
+  max-width: 400px;
+  word-wrap: break-word;
+}
+
+#result {
+  height: 400px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#result img {
+  width: 200px;
+  height: 100px;
+}
+
+
+
+.vertical-line {
+  width: 1.5px;
+  /* عرض الخط */
+  height: 130px;
+  /* تعيين ارتفاع الخط */
+  margin-right: 15px;
+  /* فراغ بين الخط والأيقونات */
+  background-color: #ce4323;
+  /* جعل الخلفية شفافة لتظهر الحدود */
+  /* لون الخط الأبيض */
+  display: flex;
+  /* استخدام flexbox لتنسيق العناصر */
+  align-items: center;
+
+}
+
+
+
+
+.social-media {
+  position: fixed;
+  /* أو relative حسب الحاجة */
+  top: 216px;
+  /* المسافة من الأعلى */
+  left: 40px;
+  /* المسافة من اليسار */
+  display: flex;
+  /* استخدام flexbox لتنسيق العناصر */
+  align-items: center;
+}
+
+.social-media ul {
+  list-style-type: none;
+  /* إزالة التعداد النقطي */
+  padding: 0;
+  /* إزالة الحشوة */
+  margin: 0;
+  /* إزالة الهوامش */
+  display: flex;
+  /* استخدام flexbox للأيقونات */
+  align-items: center;
+  flex-direction: column;
+  /* جعل الأيقونات عمودياً */
+}
+
+.social-media li {
+  margin-bottom: 10px;
+  /* إضافة هامش بين الأيقونات */
+}
+
+.social-media a {
+  text-decoration: none;
+  /* إزالة التسطير */
+  color: #ffffff;
+  /* لون الأيقونات */
+  font-size: 24px;
+  /* حجم الأيقونات */
+}
+
+.social-media a:hover {
+  color: #ce4323;
+  ;
+  /* تغيير اللون عند التمرير */
+}
+
+
+
+
+
+.team {
+  text-align: center;
+  padding: 50px;
+}
+
+.team-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  background-color: #ce422399;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+}
+
+.team-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.team-card h3 {
+  margin: 10px 0 5px;
+}
+
+.team-card p {
+  margin: 5px 0;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+
+
+
+
+
+.footer {
+  background-color: #000e20;
+  color: #fff;
+  padding: 8px 30px;
+  text-align: center;
+  width: calc(100% + 120px);
+  /* توسيع العرض لتعويض حافة الجسم */
+  position: relative;
+  left: -120px;
+  /* تعويض الحافة اليسرى للجسم */
+  box-sizing: border-box;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin: 40px 20px 20px 20px;
+}
+
+.footer-column h3 {
+  border-bottom: 2px solid #ff5733;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons li {
+  margin: 0 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff5733;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #ffffff;
+  padding-top: 20px;
+}
+
+
+
+
+
+.contact-form {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin-bottom: 50px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid #fff;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background: transparent;
+  color: #fff;
+}
+
+.contact-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff5733;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.contact-form button:hover {
+  background-color: #ce4323;
+}
+
+
+
+#recommendations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}

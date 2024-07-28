@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>TravelMate</title>
+  <link rel="stylesheet" href="./travel_recommendation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+  <nav>
+    <a href="./travel_recommendation.html">
+      <img id="logo" src="assets/logo.svg" alt="website logo" />
+    </a>
+    <ul>
+      <li><a href="./travel_recommendation.html" id="home">Home </a></li>
+      <li><a href="./about_us.html" id="home">About Us </a></li>
+      <li><a href="./contact_us.html" id="contact">Contact Us </a></li>
+    </ul>
+
+    <ul id="sectionSearch">
+      <li><input type="text" id="destinationInput" placeholder="Enter a destination or keyword"> </li>
+      <li><i class="fas fa-search"></i></li>
+      <li><button id='btnSearch'>Search</button></li>
+      <li><button id='btnClear'>Clear</button></li>
+    </ul>
+  </nav>
+
+  <div id="recommendations"></div>
+
+  <div class="homeContent">
+    <h1>EXPLORE <br> PERFECT <br> SPOT<br></h1>
+    <p id="brief">
+      <br>It inspires the discovery of new places, the embrace of different cultures and environments, and the pursuit
+      of captivating destinations that spark curiosity and awe.
+    </p>
+
+    <div class="social-media">
+      <div class="vertical-line"></div> <!-- الخط العمودي -->
+      <ul>
+        <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+      </ul>
+    </div>
+    <br>
+    <a href="./contact_us.html">
+      <button id="bookNow">BOOk NOW</button>
+    </a>
+    <br><br><br><br><br><br>
+  </div>
+  <script src="travel_recommendation.js"></script>
+</body>
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Travel Mate</h3>
+      <p>Your trusted companion for discovering the beauty of the world.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <ul>
+        <li>Email: info@travelmate.com</li>
+        <li>Phone: +962 777 888 444</li>
+        <li>Address: 123 Travel St, Amman City, Jordan</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <ul class="social-icons">
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Travel Mate. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</html>
