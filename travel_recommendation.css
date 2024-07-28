@@ -467,6 +467,8 @@ body {
   width: 250px;
   text-align: center;
   transition: transform 0.2s;
+  position: fixed;
+  z-index: 1000;
 }
 
 .recommendation-card img {
