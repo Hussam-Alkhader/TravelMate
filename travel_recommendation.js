@@ -37,6 +37,15 @@ function displayRecommendations(results) {
     const recommendationsDiv = document.getElementById('recommendations');
     recommendationsDiv.innerHTML = ''; // Clear previous results
 
+    if (results.length === 0) {
+        const noResultsMessage = document.createElement('p');
+        noResultsMessage.textContent = 'No results found.';
+        recommendationsDiv.appendChild(noResultsMessage);
+        return;
+    }
+
+    const cards = [];
+
     results.forEach(item => {
         const card = document.createElement('div');
         card.className = 'recommendation-card';
@@ -46,7 +55,22 @@ function displayRecommendations(results) {
             <h3>${item.name}</h3>
             <p>${item.description}</p>
         `;
+        cards.push(card);
         recommendationsDiv.appendChild(card);
+    });
+
+    // Calculate the max height
+    let maxHeight = 0;
+    cards.forEach(card => {
+        const cardHeight = card.offsetHeight;
+        if (cardHeight > maxHeight) {
+            maxHeight = cardHeight;
+        }
+    });
+
+    // Set all cards to the max height
+    cards.forEach(card => {
+        card.style.height = `${maxHeight}px`;
     });
 }
 
