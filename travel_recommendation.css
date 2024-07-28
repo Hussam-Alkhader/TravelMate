@@ -468,6 +468,10 @@ body {
   text-align: center;
   transition: transform 0.2s;
   color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px; /* يمكنك ضبط هذا حسب الحاجة */
 }
 
 .recommendation-card img {
