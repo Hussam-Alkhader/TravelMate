@@ -463,7 +463,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start; /* Ensure alignment at the top */
-    max-width: 70%; /* Adjust the width as necessary to leave space for the text */
+    max-width: 50%; /* Adjust the width as necessary to leave space for the text */
 }
 
 
