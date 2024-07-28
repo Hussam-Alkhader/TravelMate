@@ -480,7 +480,7 @@ body {
 .no-results-message {
     text-align: right;
     font-size: 18px;
-    color: #555;
+    color: rgb(255, 255, 255);
     margin: 20px;
 }
 
