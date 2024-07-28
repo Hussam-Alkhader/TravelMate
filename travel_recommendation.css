@@ -458,10 +458,23 @@ body {
 
 
 
-#recommendations {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+.recommendation-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
   padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.recommendation-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.recommendation-card:hover {
+  transform: scale(1.05);
 }
