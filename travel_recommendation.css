@@ -459,7 +459,7 @@ body {
 
 
 .recommendations {
-    max-width: 50%; /* Adjust the width as necessary to leave space for the text */
+    width: 500px; /* Adjust the width as necessary to leave space for the text */
 }
 
 
