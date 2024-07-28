@@ -1,52 +1,69 @@
-document.getElementById('btnSearch').addEventListener('click', () => {
-    const keyword = document.getElementById('destinationInput').value.toLowerCase();
-    fetch('travel_recommendation_api.json')
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('path/to/travel_recommendation_api.json')
         .then(response => response.json())
         .then(data => {
-            const recommendations = getRecommendations(data, keyword);
-            displayRecommendations(recommendations);
+            console.log(data);
         })
         .catch(error => console.error('Error fetching data:', error));
 });
 
-document.getElementById('btnClear').addEventListener('click', () => {
-    document.getElementById('destinationInput').value = '';
-    document.getElementById('recommendations').innerHTML = '';
+
+document.getElementById('btnSearch').addEventListener('click', () => {
+    const input = document.getElementById('destinationInput').value.toLowerCase();
+    fetch('path/to/travel_recommendation_api.json')
+        .then(response => response.json())
+        .then(data => {
+            let results = [];
+
+            if (input.includes('beach')) {
+                results = data.beaches;
+            } else if (input.includes('temple')) {
+                results = data.temples;
+            } else {
+                results = data.countries.flatMap(country => country.cities.filter(city => city.name.toLowerCase().includes(input)));
+            }
+
+            displayRecommendations(results);
+        })
+        .catch(error => console.error('Error fetching data:', error));
 });
 
-function getRecommendations(data, keyword) {
-    let results = [];
-    if (keyword.includes('beach')) {
-        results = data.beaches;
-    } else if (keyword.includes('temple')) {
-        results = data.temples;
-    } else {
-        data.countries.forEach(country => {
-            country.cities.forEach(city => {
-                if (city.name.toLowerCase().includes(keyword)) {
-                    results.push(city);
-                }
-            });
-        });
-    }
-    return results;
+function displayRecommendations(results) {
+    const recommendationsDiv = document.getElementById('recommendations');
+    recommendationsDiv.innerHTML = ''; // Clear previous results
+
+    results.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'recommendation-card';
+        card.innerHTML = `
+        <img src="${item.imageUrl}" alt="${item.name}">
+        <h3>${item.name}</h3>
+        <p>${item.description}</p>
+      `;
+        recommendationsDiv.appendChild(card);
+    });
 }
 
-function displayRecommendations(recommendations) {
-    const container = document.getElementById('recommendations');
-    container.innerHTML = ''; // Clear previous results
-    if (recommendations.length > 0) {
-        recommendations.forEach(item => {
-            const card = document.createElement('div');
-            card.classList.add('recommendation-card');
-            card.innerHTML = `
-                <img src="${item.imageUrl}" alt="${item.name}">
-                <h3>${item.name}</h3>
-                <p>${item.description}</p>
-            `;
-            container.appendChild(card);
-        });
-    } else {
-        container.innerHTML = '<p>No recommendations found.</p>';
-    }
+
+function displayRecommendations(results) {
+    const recommendationsDiv = document.getElementById('recommendations');
+    recommendationsDiv.innerHTML = ''; // Clear previous results
+
+    results.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'recommendation-card';
+        card.style.float = 'right';
+        card.innerHTML = `
+        <img src="${item.imageUrl}" alt="${item.name}">
+        <h3>${item.name}</h3>
+        <p>${item.description}</p>
+      `;
+        recommendationsDiv.appendChild(card);
+    });
 }
+
+
+document.getElementById('btnClear').addEventListener('click', () => {
+    document.getElementById('recommendations').innerHTML = '';
+    document.getElementById('destinationInput').value = '';
+});
