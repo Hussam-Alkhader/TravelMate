@@ -39,6 +39,7 @@ function displayRecommendations(results) {
 
     if (results.length === 0) {
         const noResultsMessage = document.createElement('p');
+        noResultsMessage.className = 'no-results-message';
         noResultsMessage.textContent = 'No results found.';
         recommendationsDiv.appendChild(noResultsMessage);
         return;
