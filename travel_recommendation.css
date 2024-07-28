@@ -475,6 +475,7 @@ body {
   min-height: 200px; /* يمكنك ضبط هذا حسب الحاجة */
   position: relative;
   float: right;
+  z-index: 950;
 }
 
 .no-results-message {
