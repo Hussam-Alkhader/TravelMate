@@ -472,6 +472,16 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 200px; /* يمكنك ضبط هذا حسب الحاجة */
+    position: relative;
+    z-index: 1000;
+    float: right;
+}
+
+.no-results-message {
+    text-align: right;
+    font-size: 18px;
+    color: #555;
+    margin: 20px;
 }
 
 .recommendation-card img {
