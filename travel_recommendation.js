@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('path/to/travel_recommendation_api.json')
+    fetch('travel_recommendation_api.json')
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.getElementById('btnSearch').addEventListener('click', () => {
     const input = document.getElementById('destinationInput').value.toLowerCase();
-    fetch('path/to/travel_recommendation_api.json')
+    fetch('travel_recommendation_api.json')
         .then(response => response.json())
         .then(data => {
             let results = [];
