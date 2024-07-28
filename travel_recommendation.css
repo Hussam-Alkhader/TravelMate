@@ -472,7 +472,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
   padding: 20px;
-  width: calc(33.33% - 40px); /* تعديل العرض ليكون 3 بطاقات في الصف */
+  width: 200px; /* تعديل العرض ليكون 3 بطاقات في الصف */
   text-align: center;
   transition: transform 0.2s;
   color: black;
